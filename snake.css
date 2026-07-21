@@ -1,0 +1,114 @@
+/* Old Money Snake */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    font-family:"Cormorant Garamond", serif;
+
+    background:#ece7dc;
+    color:#2d2418;
+}
+
+/* Title */
+
+h1{
+    font-size:4rem;
+    font-weight:600;
+    letter-spacing:10px;
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+    color:#2b2118;
+}
+
+/* Thin decorative line */
+
+h1::after{
+    content:"";
+    display:block;
+
+    width:160px;
+    height:1px;
+
+    margin:14px auto 0;
+
+    background:#8b7355;
+}
+
+/* Score */
+
+#score{
+    margin:18px 0 28px;
+
+    font-size:1.4rem;
+    letter-spacing:2px;
+
+    color:#5b4b39;
+}
+
+/* Canvas */
+
+#board{
+    background:#f8f4ec;
+
+    border:8px solid #4b3b2b;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.12);
+
+    border-radius:4px;
+}
+
+/* Controls */
+
+.controls{
+    margin-top:28px;
+
+    font-size:1rem;
+    letter-spacing:1px;
+
+    color:#6d5c49;
+}
+
+/* Game Over */
+
+.game-over{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(236,231,220,.85);
+
+    font-size:4rem;
+    font-weight:600;
+    letter-spacing:8px;
+
+    color:#5b1f1f;
+
+    visibility:hidden;
+    opacity:0;
+
+    transition:.3s;
+}
+
+.game-over.show{
+    visibility:visible;
+    opacity:1;
+}
